@@ -1,0 +1,402 @@
+/* Dashboard.css */
+:root {
+    --primary-color: #ff1493; /* Pink */
+    --secondary-color: #121212; /* Black */
+    --text-light: #ffffff;
+    --text-dark: #121212;
+    --hover-color: #ff69b4;
+    --border-color: #333333;
+    --background-light: #242424;
+    --background-lighter: #2a2a2a;
+  }
+  
+  .dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+  }
+  
+  /* Sidebar Styles */
+  .sidebar {
+    width: 250px;
+    background-color: var(--secondary-color);
+    border-right: 1px solid var(--border-color);
+    padding: 20px 0;
+  }
+  
+  .logo {
+    padding: 0 20px 20px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 20px;
+  }
+  
+  .logo h2 {
+    color: var(--primary-color);
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar-menu li {
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar-menu li:hover {
+    background-color: var(--background-light);
+    color: var(--primary-color);
+  }
+  
+  .sidebar-menu li.active {
+    background-color: var(--background-light);
+    color: var(--primary-color);
+    border-left: 4px solid var(--primary-color);
+  }
+  
+  /* Main Content Styles */
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: var(--background-light);
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .header h1 {
+    color: var(--primary-color);
+    margin: 0;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .content {
+    position: relative;
+  }
+  
+  .section-container {
+    background-color: var(--background-lighter);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section-container h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  /* Loader and Error Message */
+  .loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+  }
+  
+  .error-message {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: #ff6b6b;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  
+  /* Button Styles */
+  .btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: var(--hover-color);
+  }
+  
+  .btn-secondary {
+    background-color: var(--background-lighter);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+
+
+  /* Additional styles for the upload component - add these to Dashboard.css */
+
+.upload-section {
+    width: 100%;
+  }
+  
+  .upload-container {
+    background-color: var(--background-lighter);
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 600px;
+  }
+  
+  .file-input-container {
+    margin-bottom: 20px;
+  }
+  
+  .file-label {
+    display: inline-block;
+    background-color: var(--background-light);
+    color: var(--primary-color);
+    padding: 12px 20px;
+    border: 2px dashed var(--primary-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .file-label:hover {
+    background-color: rgba(255, 20, 147, 0.1);
+  }
+  
+  .file-input {
+    position: absolute;
+    left: -9999px;
+  }
+  
+  .file-info {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: var(--background-light);
+    border-radius: 4px;
+  }
+  
+  .success-message {
+    background-color: rgba(46, 204, 113, 0.1);
+    color: #2ecc71;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 20px;
+  }
+  
+  .uploaded-file-details {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: var(--background-light);
+    border-radius: 4px;
+    border-left: 4px solid var(--primary-color);
+  }
+  
+  .details-container {
+    margin-top: 10px;
+  }
+  
+  .details-container p {
+    margin: 8px 0;
+    word-break: break-all;
+  }
+
+  /* Additional styles for the all documents component - add these to Dashboard.css */
+
+.all-documents-section {
+    width: 100%;
+  }
+  
+  .documents-list {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: var(--background-lighter);
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  th {
+    background-color: var(--background-light);
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+  
+  tr:hover {
+    background-color: var(--background-light);
+  }
+  
+  .btn-sm {
+    padding: 5px 10px;
+    font-size: 0.9em;
+  }
+  
+  .document-details {
+    background-color: var(--background-lighter);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    border-left: 4px solid var(--primary-color);
+  }
+  
+  .document-details-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+  }
+  
+  .document-details-header h3 {
+    margin: 0;
+    color: var(--primary-color);
+  }
+  
+  .btn-close {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .document-details-content p {
+    margin: 10px 0;
+    word-break: break-all;
+  }
+  
+  .document-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .no-documents {
+    text-align: center;
+    padding: 40px;
+    background-color: var(--background-lighter);
+    border-radius: 8px;
+  }
+
+
+
+  /* Additional styles for the document features - add these to Dashboard.css */
+
+.table-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn-danger {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c0392b;
+  }
+  
+  .translate-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .language-select {
+    padding: 8px;
+    border-radius: 4px;
+    background-color: var(--background-light);
+    color: var(--text-light);
+    border: 1px solid var(--border-color);
+  }
+  
+  .result-container {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--background-light);
+    border-radius: 4px;
+    border-left: 4px solid var(--primary-color);
+  }
+  
+  .result-container h4 {
+    margin-top: 0;
+    color: var(--primary-color);
+  }
+  
+  .result-content {
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 4px;
+    font-family: monospace;
+  }
+  
+  button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .document-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  /* Loading spinners */
+  .loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s ease-in-out infinite;
+    margin-right: 10px;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .document-actions {
+      flex-direction: column;
+    }
+    
+    .translate-container {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }

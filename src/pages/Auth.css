@@ -1,0 +1,206 @@
+:root {
+    --primary-color: #ff1493;
+    --primary-light: #ff69b4;
+    --secondary-color: #121212;
+    --text-color: #ffffff;
+    --background-dark: #0a0a0a;
+    --background-light: #1a1a1a;
+  }
+  
+  .auth-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--background-dark);
+  }
+  
+  .auth-card {
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--background-light);
+    color: var(--text-color);
+  }
+  
+  .auth-header {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .auth-header h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+  }
+  
+  .auth-header p {
+    color: #a0a0a0;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #e0e0e0;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(255, 20, 147, 0.2);
+  }
+  
+  .btn-block {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+  
+  .auth-footer {
+    margin-top: 2rem;
+    text-align: center;
+    color: #a0a0a0;
+  }
+  
+  .auth-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .auth-footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .error-message {
+    background-color: rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    color: #ff6b6b;
+    padding: 0.8rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .auth-background {
+    width: 50%;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--background-dark) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .auth-logo {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    z-index: 2;
+  }
+  
+  .auth-decoration {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .floating-doc {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(255, 20, 147, 0.2);
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  .fd1 {
+    width: 120px;
+    height: 160px;
+    right: 20%;
+    top: 20%;
+    animation-name: float1;
+    background: linear-gradient(135deg, rgba(255, 20, 147, 0.1), rgba(255, 20, 147, 0.02));
+    border: 1px solid rgba(255, 20, 147, 0.2);
+  }
+  
+  .fd2 {
+    width: 100px;
+    height: 140px;
+    left: 20%;
+    top: 40%;
+    animation-name: float2;
+    animation-delay: 2s;
+    background: linear-gradient(135deg, rgba(255, 20, 147, 0.08), rgba(255, 20, 147, 0.01));
+    border: 1px solid rgba(255, 20, 147, 0.15);
+  }
+  
+  .fd3 {
+    width: 80px;
+    height: 120px;
+    right: 30%;
+    bottom: 20%;
+    animation-name: float3;
+    animation-delay: 4s;
+    background: linear-gradient(135deg, rgba(255, 20, 147, 0.05), rgba(255, 20, 147, 0.01));
+    border: 1px solid rgba(255, 20, 147, 0.1);
+  }
+  
+  @keyframes float1 {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-20px) rotate(5deg); }
+    50% { transform: translateY(0) rotate(0deg); }
+    75% { transform: translateY(20px) rotate(-5deg); }
+  }
+  
+  @keyframes float2 {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(20px) rotate(-3deg); }
+    50% { transform: translateY(0) rotate(0deg); }
+    75% { transform: translateY(-20px) rotate(3deg); }
+  }
+  
+  @keyframes float3 {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-15px) rotate(-2deg); }
+    50% { transform: translateY(0) rotate(0deg); }
+    75% { transform: translateY(15px) rotate(2deg); }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .auth-container {
+      flex-direction: column-reverse;
+    }
+    
+    .auth-card, .auth-background {
+      width: 100%;
+    }
+    
+    .auth-background {
+      height: 200px;
+    }
+    
+    .auth-card {
+      padding: 2rem 1rem;
+    }
+  }
