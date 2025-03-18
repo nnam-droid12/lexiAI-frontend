@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import StyledAnalysisResult from './StyledAnalysisResult';
+import './StyledAnalysisResult.css';
 
 const AllDocuments = () => {
   const [documents, setDocuments] = useState([]);
@@ -384,12 +386,8 @@ const AllDocuments = () => {
               </div>
             </div>
             
-            {analysisResult && (
-              <div className="result-container">
-                <h4>Analysis Result</h4>
-                <pre className="result-content">{JSON.stringify(analysisResult, null, 2)}</pre>
-              </div>
-            )}
+           
+            {analysisResult && <StyledAnalysisResult analysisResult={analysisResult} />}
             
             {readResult && (
   <div className="result-container">
