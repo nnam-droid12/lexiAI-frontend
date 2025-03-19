@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import UploadDocument from './UploadDocuments';
 import AllDocuments from './DocumentList';
+import SearchDocument from './SearchDocument'; // Import the new component
 import './Dashboard.css';
 
 const Dashboard = () => {
@@ -72,13 +73,7 @@ const Dashboard = () => {
           {/* Different sections will be rendered based on activeSection state */}
           {activeSection === 'upload' && <UploadDocument />}
           {activeSection === 'all-documents' && <AllDocuments />}
-
-          {activeSection === 'search' && (
-            <div className="section-container">
-              <h2>Search Document</h2>
-              <p>Search functionality coming in the next step...</p>
-            </div>
-          )}
+          {activeSection === 'search' && <SearchDocument />}
         </div>
       </div>
     </div>
