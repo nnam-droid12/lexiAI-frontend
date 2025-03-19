@@ -1,0 +1,46 @@
+/* StyledTranslationResult.css */
+.translation-result-container {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--background-light);
+    border-radius: 4px;
+    border-left: 4px solid var(--primary-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .translation-result-container h4 {
+    margin-top: 0;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .translation-content {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  .translation-content p {
+    margin: 10px 0;
+    line-height: 1.5;
+  }
+  
+  .translation-content .section-header {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 15px;
+  }
+  
+  .empty-result {
+    color: #888;
+    font-style: italic;
+    padding: 15px;
+    text-align: center;
+    background-color: var(--background-light);
+    border-radius: 4px;
+  }

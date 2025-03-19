@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import StyledAnalysisResult from './StyledAnalysisResult';
+import StyledTranslationResult from './StyledTranslationResult';
+import './StyledTranslationResult.css';
 import './StyledAnalysisResult.css';
 
 const AllDocuments = () => {
@@ -426,12 +428,7 @@ const AllDocuments = () => {
   </div>
 )}
             
-            {translationResult && (
-              <div className="result-container">
-                <h4>Translation Result</h4>
-                <pre className="result-content">{JSON.stringify(translationResult, null, 2)}</pre>
-              </div>
-            )}
+            {translationResult && <StyledTranslationResult translationResult={translationResult} />}
           </div>
         </div>
       ) : (
